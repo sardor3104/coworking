@@ -1,0 +1,155 @@
+# mas = {
+#     "boolean":"mantiqiy qiymat",
+#     "float":"o'nlik son",
+#     "for":"biror amalni qayta qayta bajarish tsikli",
+#     "if":"shartlarni tekshirish operatori",
+#     "integer":"butun son"
+#    }
+# for key,value in mas.items():
+#     print(key.title() , "-" , value.capitalize())
+# davlat = {
+#     "Uzb":"tash",
+#     "AQSH":"WAsh",
+#     "Italiya":"parij",
+#     "qozoq":"nursultan",
+#     "Rossiya":"moskva",
+#     "Tojik":"dushanbe",
+#     "singapur":"singapur"
+#     }
+# print("davlatlar:")
+# for kalit in sorted(davlat.keys()):
+#     print(kalit.capitalize())
+# print("\npoytaxtlar:")
+# for qiymat in sorted(davlat.values()):
+#     print(qiymat.capitalize())
+# davlatnomi = input("kerakli davlatni tanlang:")
+# x = davlat.get(davlatnomi,"bunday davlat yuq")
+# print(x)
+# ##
+# import string
+# arr=[]
+# ovqatlar = {
+#     "manti":10000,
+#     "kabob":20000,
+#     "shashlik":6000,
+#     "norin":15000,
+#     "osh":40000
+#     }
+# x = int(input("nechta ovqat zakaz qilasiz:"))
+# for i in range(x):
+#     arr.append(input(f"{i+1}- ovqat: "))
+# for ovqat in arr:
+#     if ovqat in ovqatlar.keys():
+#         print(ovqat , ":", ovqatlar[ovqat])
+#     else:
+#         print("hozirda " + ovqat + " yo'q")
+##
+# shaxslar = [
+#     {"ism":"abu abdulloh Muhammad ibn ismoil",
+#      'yil':810,
+#      'tjoy':"buxoro",
+#      'age':60,
+#      'asarlari':["al-jome' as sahih","al-adab al-mufrad","at-tarix al-kabir","at-tarix as-sag'ir"]
+#         },
+#     {"ism":"abdulla qodiriy",
+#      'yil':1894,
+#      'tjoy':"toshkent",
+#      'age':44,
+#      'asarlari':["o'tkan kunlar","mehrobdan chayon","obid ketmon"]
+#         },
+#     {'ism':'erkin vohidov',
+#      'yil':1936,
+#      'tjoy':"farg'ona",
+#      'age':80,
+#      'asarlari':["tong nafasi","qo'shiqlarim sizga","o'zbegim","qiziquvchan Matmusa"]
+#         },
+#     {'ism':'alisher navoiy',
+#      'yil':1441,
+#      'tjoy':'xirot',
+#      'age':60,
+#      'asarlari':["xamsa",'lison ut-tayr','mahbub ul-qulub','munojot']
+#         }
+#     ]
+# for shaxs in shaxslar:
+#     print(f"\n\n{shaxs['ism'].title()} {shaxs['yil']}-yilda {shaxs['tjoy'].capitalize()}da tavallud topgan. {shaxs['age']} yil umr ko'rgan . Asarlari : ")
+#     for asar in shaxs['asarlari']:
+#         print(asar.capitalize(),end='\t')
+#     print()
+# ##
+# ism = {
+#     "ali":["terminator",'rambo','titanic'],
+#     "vali":["tenet",'inception','intersteller'],
+#     'hasan':['abdullajon','bomba','shaytanat'],
+#     'husan':['mahallada duv-duv gap','john wick']
+#     }
+# ##
+# ism ={}
+# for a in range(4):
+#     ism[input("ism kiriting: ")]=None
+# for x in ism.keys():
+#     kinos = []
+#     for kinolar in range(3):
+#         kinos.append(input(x+"ning yoqtirgan kinosi: "))
+#         ism[x]=kinos
+# for data in ism:
+#     print(data.title()+"ning sevimli kinolari: ")
+#     for kino in ism[data]:
+#         print(kino.title())
+# ##
+# uzb = {
+#     "nomi":"o'zbekiston",
+#     "poytaxt":"Toshkent",
+#     "hudud":448978,
+#     "aholi":33000000,
+#     "pul":"so'm"
+#     }
+# rus= {
+#     "nomi":"rossiya",
+#     'poytaxt':'moskva',
+#     'hudud':17098346,
+#     'aholi':144000000,
+#     'pul':'rubl'
+#     }
+# aqsh={
+#     'nomi':'aqsh',
+#     'poytaxt':"vashington",
+#     'hudud':9631418,
+#     'aholi':327000000,
+#     'pul':'dollar'
+#     }
+# malayziya={
+#     'nomi':"malayziya",
+#     'poytaxt':"kuala- lumpur",
+#     'hudud':329750,
+#     'aholi':25000000,
+#     'pul':'rinngit'
+#     }
+# davlatlar = [uzb,rus,aqsh,malayziya]
+# x = input("davlat nomini kiriting: ")
+# for davlat in davlatlar:
+#     if x.lower() in davlat['nomi'].lower():    
+#         if davlat['nomi'].lower()=="aqsh":
+#             davlat["nomi"]=davlat['nomi'].upper()
+#         else:
+#             davlat['nomi']=davlat['nomi'].capitalize()
+#         print(f"{davlat['nomi']}ning poytaxti {davlat['poytaxt'].title()}",
+#               f"\nHududi: {davlat['hudud']}kv.km\nAholisi: {davlat['aholi']}",
+#               f"\nPul birligi: {davlat['pul']}")
+#         break;
+# else:
+#     print('topilmadi')
+##
+
+savol ="Kiritilgan sonning ildizini qaytaruvchi dastur.\n"
+savol += "Musbat son kiriting "
+savol += "(dasturni to'xtatish uchun 'exit' deb yozing): "
+
+while True:
+    qiymat = input(savol)
+    if qiymat=='Exit':
+        break
+    elif int(qiymat)<0:
+        continue
+    else:
+        ildiz = float(qiymat)**(0.5)
+        print(f"{qiymat} ning ildizi {ildiz} ga teng")
