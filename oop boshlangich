@@ -1,0 +1,57 @@
+# class user():
+#     def __init__(self,ism,foydalanuvchi_ismi,email,yoshi):
+#         self.name = ism
+#         self.username = foydalanuvchi_ismi
+#         self.mail = email
+#         self.age = yoshi
+#     def get_info(self):
+#         return f"foydalanuvchi nomi: {self.username} , ismi: {self.name} , email:{self.mail} , yoshi {self.age}"
+# talaba1=user("Ravshan","ravshan123","ravshan@mail.ru",21)
+# talaba2=user("Rustam","rusik123","rustambek@mail.ru",31)
+# talaba3=user("Rayxon","rayxon123a3","rayxona@mail.ru",24)
+# talaba4=user("Ramazon","ramizt123","ramazan@mail.ru",19)
+# print(talaba1.get_info(),"\n",talaba2.get_info(),'\n',talaba3.get_info(),'\n',talaba4.get_info())
+
+##
+class avto():
+    def __init__(self,model,rang,karopka,narh):
+        self.model = model
+        self.color = rang
+        self.gearbox = karopka
+        self.cost = narh
+        self.distance = 0
+    def get_model(self):
+        return self.model
+    def get_color(self):
+        return self.color
+    def get_gearbox(self):
+        return self.gearbox
+    def get_cost(self):
+        return self.cost
+    def get_distance(self):
+        return self.distance
+    def set_model(self,model):
+        self.model=model
+    def set_color(self,color):
+        self.color=color
+    def set_gearbox(self,gearbox):
+        self.gearbox=gearbox
+    def set_cost(self,cost):
+        self.cost=cost
+    def set_ditance(self,distance):
+        self.distance=distance
+    def set_add_distance1km(self):
+        self.distance+=1
+    def get_info(self):
+        return f"Avtomobil modeli: {self.model} , rangi: {self.color} , karopka: {self.gearbox} , narxi: {self.gearbox} bosib otgan masofasi: {self.distance}"
+class avtosalon():
+    def __init__(self,nomi,manzili,sotuvdagi_avtomobillari=[],soni=0):
+        self.name=nomi
+        self.address=manzili
+        self.on_sale=sotuvdagi_avtomobillari
+        self.amount=soni
+    def add_new_auto(self):
+        self.on_sale.append(avto)
+    def get_info_salon_auto(self):
+        return [auto.get_info for auto in self.on_sale]
+    
