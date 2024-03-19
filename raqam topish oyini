@@ -1,0 +1,46 @@
+from random import randint
+def bizga(x=1,y=10):
+    a=randint(x,y)
+    son=-1
+    i=0
+    print(f"    men [{x},{y}] oraliqdagi son o'yladim topishga urinib ko'ring ")
+    while(son != a):
+        son = int(input(">>"))
+        i+=1
+        if son<a:
+            print('siz kiritgan sondan katta')
+        elif son>a:
+            print('siz kiritgan sondan kichik')
+        else :
+            print(f"topdingiz urinishlar soni {i}ta")
+            return i
+def kompga(x=1,y=10):
+    j=0
+    javob=''
+    print(f"\n\n    [{x},{y}] oraliqdagi son o'ylang man topishga harakat qilaman ")
+    input("o'ylagan bo'lsangiz Enter tugmachasini bosing ")
+    while javob.lower() != "t":
+        b = randint(x,y)
+        j=j+1
+        javob = input(f" siz o'ylagan son {b}ga teng . To'gri(t) / katta(+) / kichik(-):  ")
+        if javob == '+':
+            x=b+1
+        elif javob == '-':
+            y=b-1
+        elif javob.lower() == 't':
+            print(f"mening {b} sonini topishga ketgan urinishlarim {j}")
+            return j
+        else:
+            print("xato ma'lumot kiritdingiz")
+surov = 'ha'
+while surov=="ha":
+    natija1=bizga()
+    natija2=kompga()
+    print("\n")
+    if natija1<natija2:
+        print(f"siz {natija1}:{natija2} hisobida g'alaba qozondingiz")
+    elif natija2<natija1:
+        print(f"men sizni {natija2}:{natija1} hisobida yutdim")
+    else:
+        print(f"vaziyat durrang {natija2}:{natija1}")
+    surov = input("yana davom ettiramizmi (ha/yuq)").lower()
