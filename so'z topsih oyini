@@ -1,0 +1,27 @@
+from uzwords import words
+import random
+def word():
+    suz = random.choice(words)
+    while "-" in suz or " " in suz:
+        suz = random.choice(words)
+    yana=''
+    kurinish=''
+    for i in suz:
+        kurinish+='-'
+        b=''
+    while True:
+        mano = input(f"so'zimiz korinishi {kurinish}\nsiz kiritgan harakatlar {b} \n>>")
+        if mano in b:
+            print(f"siz {mano}ni avval ham kiritgansiz")
+        kurinish=''
+        b+=mano
+        for ozi in suz:
+            if ozi in mano or ozi in yana:
+                kurinish=kurinish+ozi
+                yana=yana+ozi
+            else:
+                kurinish+='-'
+        if kurinish.lower()==suz.lower():
+            print('tabriklayman')
+            break
+word()
