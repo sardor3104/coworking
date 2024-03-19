@@ -1,0 +1,23 @@
+import math
+def funkya(x):
+    return -(x**2)+2
+def fya(a,b):
+    x=True
+    e=float(input("epsilon: "))
+    while x:  
+        c=(a+b)/2
+        if math.fabs(b-a)<e:
+            x=False
+            return a
+        if  (funkya(c)>0 and funkya(a)<=0) or (funkya(c)<0 and funkya(b)<=0):
+            b=c
+        elif (funkya(c)<0 and funkya(b)>=0) or (funkya(c)>0 and funkya(a)>=0):
+            a=c
+print(fya(float(input("birinchi oraliqni kiriting: ")),float(input('ikkinchi oraliqni kiriting: '))))
+        
+        
+        
+        
+        
+        
+  
