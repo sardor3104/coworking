@@ -1,0 +1,205 @@
+
+# print(" buyurtmalarni kiriting \n >>>")
+# arr=[]
+# x='ha'
+# n=1
+# while x=='ha' or x=='':
+#    arr.append(input(f"{n}- buyurtma: "))
+#    x=input("yana buyurtma qabul qilasizmi? ").lower()
+#    n+=1
+# print(f"buyurtmalar ro'yxati: ")
+# for buyurtma in arr:
+#     print(buyurtma)
+
+# mahsulotlar = {}
+# kalit=''
+# qiymat=''
+# while kalit != 'tugadi':
+#     if kalit!='tugadi':
+#         kalit = input('mahsulot nomini kiriting: ')
+#         qiymat = input('mahsulot narxini kiriting: ')
+#         mahsulotlar[kalit]=qiymat
+# for mahsulot in mahsulotlar.keys():
+#     print(mahsulotlar[mahsulot])
+
+# e_dokon = {'uzum':10000,'olma':5000,'tarvuz':6000,'gilos':9000,'qovun':5500,'anor':8900,'shaftoli':7000,'orik':4000}
+# arr = []
+# while True:
+#     x = input("mahsulot nomini kiriting: ")
+#     if x in e_dokon.keys():
+#         print(f"{x}ning narxi {e_dokon[x]}so'm")
+#         arr.append(x)   
+#     elif x == "chiqish":
+#         break
+#     else:
+#         print("bizda bu mahsulot yo'q")
+# if arr.count==0:
+#     print('siz mahsulot xarid qilmadingiz')
+# else:
+#     print("siz xarid qilgan mahsulotlar: ")
+#     for a in arr:
+#       print(a)
+
+# def yosh(a):
+#     return 2024-a
+# x= input('ismingizni kiriting: ')
+# a= int(input('yoshingizni kiriting: ')
+#print(f"{x} sizning tugilgan yilingiz {yosh(a)}")
+
+# def amal(x):
+#     print(x**2)
+#     print(x**3)
+# amal(float(input()))
+
+# def toq(x):
+#     if x%2==0:
+#         print('juft')
+#     else:
+#         print('toq')
+# toq(int(input()))
+
+# def katta(x,y):
+#     if x>y:
+#         print(x)
+#     elif x==y:
+#         print('sonlar teng')
+#     else:
+#         print(y)
+# a=int(input())
+# b=int(input())
+# katta(a,b)
+
+# def daraja(a,b):
+#     print(a**b)
+# daraja(float(input()),float(input()))
+
+# def daraja(a,b=2):
+#     print(a**b)
+# daraja(float(input()))
+
+# def son(x):
+#     for i in range(1,int(x**(1/2))+1):
+#         if x % i ==0:
+#              print(f"{x} soni {i}ga qoldiqsiz bo'linadi")
+# son(float(input()))
+# print('dastur tugadi')
+
+# shaxs=[]
+# x='ha'
+# def malumot():
+#     kishi = {'ism':input("Ismingizni kiriting: "),'familiya':input("familiyangizni kiriting: "),'t_yil':input("tug'ilgan yilingizni kiriting: "),'t_joy':input("tug'ilgan joyingizni kiriting: "),'email':None,'raqam':None}
+#     x = input("emailni kiritmoqchimisiz? (ha/yuq) ")
+#     if x.lower()=='ha':
+#         kishi['email']=input("email addressni kiriting: ")
+#     y = input("telefon raqamingizni kiritasizmi? (ha/yuq) ")
+#     if y.lower()=='ha':
+#         kishi['raqam']=input('telefon raqami: ')
+#     shaxs.append(kishi)
+# while x=='ha':
+#     x=input("ma'lumot kiritmoqchimisiz: (ha/yuq) ")
+#     if x=='ha':
+#         malumot()
+# for mijoz in shaxs:
+#     print(f"{shaxs.index(mijoz)+1}-Mijoz haqida ma'lumotlar : \n FIO: {mijoz['ism']} {mijoz['familiya']} \n tug'ilgan yili: {mijoz['t_yil']} \n tug'ilgan joyi: {mijoz['t_joy']}\n qo'shimcha ma'lumotlar: ")
+#     if mijoz['email']!=None:
+#         print(f"email pochta: {mijoz['email']}")
+#     if mijoz['raqam']!=None:
+#         print(f"telefon raqami: {mijoz['raqam']}")
+#     if mijoz['raqam']==mijoz['email']==None:
+#         print('mavjud emas')
+# print()
+
+# def katta(x,y,z):
+#     if x>y and x>z:
+#         return x
+#     elif y>x and y>z:
+#         return y
+#     else:
+#         return z
+# print(katta(input(),input(),input()))
+
+##doira malumotlari
+# def aylana(x):
+#     doira= {'radius':x , 'diametr':2*x,'perimetr':2*3.14*x,'yuz':3.14*x**2}
+#     return doira
+# print(aylana(float(input('radiusni kiriting: '))))
+# ##range f-yasi
+# def oraliq(start,stop,step=1):
+#     arr = []
+#     while start<stop:
+#         arr.append(start)
+#         start+=step
+#     return arr
+# print(oraliq(4,25))
+
+# ##TUB sonlar oraliqi
+# arr=[]
+# def oraliq1(a,b):
+#     for son in range(a,b):
+#         if tub(son)!=None:
+#             arr.append(tub(son))
+# def tub(x):
+#     a=0
+#     for i in range(2,x):
+#         if x%i!=0:
+#             a+=1
+#     if a==x-2:
+#         return x
+# oraliq1(int(input('birinchi oraliq: ')),int(input('ikkinchi oraliq: ')))
+# print(arr)
+
+##Fibonachi sonlari
+# arr=[1]
+
+# x=1
+# n=0
+# b = int(input('fibonachilar sonini kiriting: '))
+# def fibonachi(son):
+#     for i in range(1,son):
+#         global x,n
+#         b=x
+#         x=n+x
+#         arr.append(x)
+#         n=b
+     
+# fibonachi(b)
+# print(arr)
+##
+# def katta_harf(ism):
+#     data = ism[:]
+#     while ism:
+#         ism.pop()
+#     while data:
+#         y=data.pop()
+#         ism.append(y.title())
+# ismlar = ['ali', 'vali', 'hasan', 'husan']
+# katta_harf(ismlar)
+# print(ismlar)
+##
+# def katta_harf(ism):
+#     arr = ism[:]
+#     ism=[]
+#     while arr:
+#         x= arr.pop()
+#         ism.append(x.title())
+#     return ism
+    
+# ismlar = ['ali', 'vali', 'hasan', 'husan']
+# yangi_ismlar = katta_harf(ismlar)
+# print(ismlar)
+# print(yangi_ismlar)
+##
+# def kopaytma(*amal):
+#     i = 1 
+#     for x in amal:
+#         i=x*i
+#     return i
+# print(kopaytma(2,3,4,5,6))
+##
+# def talaba(x,y,**data):
+#     data['ism']=x
+#     data['familiya']=y
+#     return data
+# talaba('sardor','abduhoshimov',yoshi=20,otasini_ismi='eshqul')
+# print()
+print('???857 uvhjkh'.isascii())
